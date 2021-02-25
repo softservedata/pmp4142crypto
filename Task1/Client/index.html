@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caesar Cipher Algorithm</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</head>
+<body class="container-fluid">
+    <div class="row mt-5 px-5">
+        <div class="col-6 mt-4">
+            <form class="d-flex justify-content-around">
+                <div>
+                    <input class="form-control"
+                           type="number"
+                           id="shift"
+                           placeholder="shift"
+                           value="-27"
+                           required/>
+                </div>
+                <div>
+                    <button class="btn btn-outline-primary"
+                            type="submit"
+                            onclick="ajaxRequest('encrypt')">
+                        Read / Encrypt / Write
+                    </button>
+                </div>
+                <div>
+                    <button class="btn btn-outline-primary"
+                            type="submit"
+                            onclick="ajaxRequest('decrypt')">
+                        Read / Decrypt / Write
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row px-5 my-5 bg-light">
+        <div class="col-6 text-center text-truncate text-wrap my-5">
+            <p class="font-monospace"
+               id="text"
+            >text</p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
