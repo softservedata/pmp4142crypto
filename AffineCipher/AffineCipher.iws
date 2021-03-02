@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0a5a219e-2217-4e16-a568-247f06d45df1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../AmazonAutomation/src/main/java/cookies/CookieRead.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../AmazonAutomation/src/main/java/cookies/CookieWrite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../testingSofware/src/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../testingSofware/src/main/Task1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/src/main/java/com/softserve/ita/java442/cityDonut/CityDonutApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CityDonut-develop/src/test/java/com/softserve/ita/java442/cityDonut/CityDonutApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1p9WJVWbGJTIg6VPvVR4opC6RTh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AffineCipher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AffineCipher" />
+      <module name="AffineCipher" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AffineCipher" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a5a219e-2217-4e16-a568-247f06d45df1" name="Default Changelist" comment="" />
+      <created>1614595717655</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614595717655</updated>
+      <workItem from="1614595718990" duration="2396000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
