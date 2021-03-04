@@ -1,0 +1,93 @@
+﻿// char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToCharArray();
+// double[] frequensy = { 12.702, 9.056, 8.167, 7.507, 6.966, 6.749, 6.327, 6.094, 5.987, 4.253, 4.025, 2.782, 2.758, 2.406, 2.360, 2.228, 2.015, 1.974, 1.929, 1.492, 0.978, 0.772, 0.153, 0.150, 0.095, 0.074 };
+
+
+//public Dictionary<Char, int> GetLettersEntrence(List<string> text)
+//{
+//    Dictionary<Char, int> alphabets = new Dictionary<Char, int>();
+//    foreach (var elem in text)
+//    {
+//        for (int i = 0; i < elem.Length; i++)
+//        {
+//            char character = elem[i];
+//            character = Convert.ToChar(character.ToString().ToLower());
+//            if (Char.IsLetter(character))
+//            {
+//                if (alphabets.ContainsKey(character))
+//                    alphabets[character] = alphabets[character] + 1;
+//                else
+//                    alphabets.Add(character, 1);
+//            }
+//        }
+//    }
+//    return alphabets;
+//}
+
+
+////
+//List<Task<(int, int, int)>> tasks = new List<Task<(int, int, int)>>();
+////
+//for (int i = 0; i < 4; i++)
+//    tasks.Add(new Task<(int, int, int)>(() => DecodeHelper(potential_a.Skip(i * 3).Take((i + 1) * 3).ToArray(), potential_b, readText)));
+////
+
+////
+//foreach (var t in tasks)
+//    t.Start();
+
+
+////
+//Task.WaitAll(tasks.ToArray());
+
+//Task.WaitAll();
+
+//List<(int, int, int)> res = new List<(int, int, int)>();
+////
+
+//foreach (var ind in tasks)
+//    res.Add(ind.Result);
+////
+//int best_a = res[0].Item1;
+//int best_b = res[0].Item2;
+//int max_sum = res[0].Item3;
+
+//foreach (var elem in res)
+//{
+//    if (elem.Item3 > max_sum)
+//    {
+//        best_a = elem.Item1;
+//        best_b = elem.Item2;
+//        max_sum = elem.Item3;
+//    }
+//}
+
+
+//var t1 = Task.Run(() => DecodeHelper(potential_a.Skip(0).Take(3).ToArray(), potential_b, readText));
+//var task2 = Task.Run(() => DecodeHelper(potential_a.Skip(3).Take(6).ToArray(), potential_b, readText));
+//var task3 = Task.Run(() => DecodeHelper(potential_a.Skip(6).Take(9).ToArray(), potential_b, readText));
+//var task4 = Task.Run(() => DecodeHelper(potential_a.Skip(9).Take(12).ToArray(), potential_b, readText));
+
+//////
+//int best_a = t1.Result.Item1;
+//int best_b = t1.Result.Item2;
+//int best_sum = t1.Result.Item3;
+//if (best_sum < task2.Result.Item3)
+//{
+//    best_sum = task2.Result.Item3;
+//    best_a = task2.Result.Item1;
+//    best_b = task2.Result.Item2;
+//}
+//if (best_sum < task3.Result.Item3)
+//{
+//    best_sum = task3.Result.Item3;
+//    best_a = task3.Result.Item1;
+//    best_b = task3.Result.Item2;
+//}
+//if (best_sum < task4.Result.Item3)
+//{
+//    best_sum = task4.Result.Item3;
+//    best_a = task4.Result.Item1;
+//    best_b = task4.Result.Item2;
+//}
+
+//1.38
