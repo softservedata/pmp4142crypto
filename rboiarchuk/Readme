@@ -1,3 +1,6 @@
 Task 1 usage:
 encrypt: cat text.txt | groovy caesar_cipher.groovy [key] > text_enc.txt
 decrypt: cat text_enc.txt | groovy caesar_cipher.groovy [key] -d > text_dec.txt
+Task 2 usage:
+encrypt: cat text.txt | groovy affine_cipher.groovy > text_enc.txt
+decrypt: cat text_enc.txt | groovy affine_cipher.groovy -d > text_dec.txt
