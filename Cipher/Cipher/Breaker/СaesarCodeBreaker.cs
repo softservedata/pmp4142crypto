@@ -41,8 +41,6 @@ namespace Cipher.Breaker
 
             ICipher cipher = new CeaserCipher(n);
             string decodedText = cipher.Decode(codeStream, decodedStream);
-
-            decodedStream.SetText(decodedText);
             return decodedText;
         }
     }

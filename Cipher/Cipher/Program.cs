@@ -45,9 +45,15 @@ namespace Cipher
             ICipher cipher = new CardanCipher("1f84");
             cipher.Encode(text, encodedText);
             cipher.Decode(encodedText, decodedText);
-            //ICodeBreaker codeBreaker = new CardanCodeBreaker();
-            //codeBreaker.Break(encodedText, breakedText);
+            ICodeBreaker codeBreaker = new CardanCodeBreaker();
+            codeBreaker.Break(encodedText, breakedText);
 
+            ////Task4
+            //ICipher cipher = new FenceCipher(5);
+            //cipher.Encode(text, encodedText);
+            //cipher.Decode(encodedText, decodedText);
+            //ICodeBreaker codeBreaker = new FenceCodeBreaker();
+            //codeBreaker.Break(encodedText, breakedText);
         }
     }
 }

@@ -87,9 +87,6 @@ namespace Cipher.Breaker
 
             ICipher cipher = new AffineCipher(trueAlpha, trueBeta);
             decodedText = cipher.Decode(codeStream, decodedStream);
-
-            decodedStream.SetText(decodedText);
-
             return decodedText;
         }
 
