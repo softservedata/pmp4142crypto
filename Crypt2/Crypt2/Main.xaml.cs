@@ -35,5 +35,11 @@ namespace Crypt2
             less2 les2 = new less2();
             les2.ShowDialog();
         }
+
+        private void Les3_Click(object sender, RoutedEventArgs e)
+        {
+            less3 les3 = new less3();
+            les3.ShowDialog();
+        }
     }
 }
