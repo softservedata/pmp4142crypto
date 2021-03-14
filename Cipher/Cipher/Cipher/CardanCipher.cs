@@ -27,6 +27,21 @@ namespace Cipher.Cipher
             {
                 holePosition[i] = GetHolePosition(key[i]);
             }
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (GetHolePosition(key[i]) == j)
+                    {
+                        Console.Write("1 ");
+                    }
+                    else
+                    {
+                        Console.Write("0 ");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
 
         public string Decode(IStream codeStream, IStream decodedStream)
@@ -42,7 +57,7 @@ namespace Cipher.Cipher
                 {
                     for (int j = 0; j < 4; j++)
                     {
-                        if(code.Length > temp)
+                        if (code.Length > temp)
                         {
                             charMatr[i, j] = code[temp];
                             temp += 1;
@@ -51,9 +66,9 @@ namespace Cipher.Cipher
                         {
                             charMatr[i, j] = '\0';
                         }
-                       
+
                     }
-                   
+
                 }
 
                 for (int i = 0; i < 4; i++)
@@ -95,12 +110,12 @@ namespace Cipher.Cipher
                         }
                     }
                     charMatr = Rotation(charMatr);
-                }          
+                }
                 for (int i = 0; i < 4; i++)
                 {
                     for (int j = 0; j < 4; j++)
                     {
-                        if (charMatr[i,j] == '\0')
+                        if (charMatr[i, j] == '\0')
                         {
                             encoded += arr_en[random.Next() % arr_en.Length];
                         }
@@ -108,7 +123,7 @@ namespace Cipher.Cipher
                         {
                             encoded += charMatr[i, j];
                         }
-                    }         
+                    }
                 }
 
                 charMatr = new char[4, 4];

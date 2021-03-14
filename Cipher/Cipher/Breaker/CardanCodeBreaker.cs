@@ -12,9 +12,11 @@ namespace Cipher.Breaker
     {
         public string Break(IStream codeStream, IStream decodedStream)
         {
+            Console.WriteLine("Start To Break Code");
             string code = codeStream.GetText();
             string decodedText = "";
             string data = "THE OLD MAN\nAND\nTHE SEA";
+            Console.WriteLine("We know that text start with:\n____________________\n"+ data+ "\n____________________");
             int[] holePosition = new int[4];
             char[,] charMatr = new char[4, 4];
             string key = "";

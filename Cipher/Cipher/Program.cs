@@ -42,11 +42,11 @@ namespace Cipher
             //// 2 = 0010
             //// 4 = 0100
             //// 8 = 1000
-            ICipher cipher = new CardanCipher("1f84");
-            cipher.Encode(text, encodedText);
-            cipher.Decode(encodedText, decodedText);
-            ICodeBreaker codeBreaker = new CardanCodeBreaker();
-            codeBreaker.Break(encodedText, breakedText);
+            //ICipher cipher = new CardanCipher("1f84");
+            //cipher.Encode(text, encodedText);
+            //cipher.Decode(encodedText, decodedText);
+            //ICodeBreaker codeBreaker = new CardanCodeBreaker();
+            //codeBreaker.Break(encodedText, breakedText);
 
             ////Task4
             //ICipher cipher = new FenceCipher(5);
@@ -54,6 +54,14 @@ namespace Cipher
             //cipher.Decode(encodedText, decodedText);
             //ICodeBreaker codeBreaker = new FenceCodeBreaker();
             //codeBreaker.Break(encodedText, breakedText);
+
+            ////Task5
+            ICipher cipher = new VigenereCipher("a");
+            cipher.Encode(text, encodedText);
+            cipher.Decode(encodedText, decodedText);
+            ICodeBreaker codeBreaker = new VigenereCodeBreaker();
+            codeBreaker.Break(encodedText, breakedText);
         }
     }
 }
+
