@@ -12,8 +12,7 @@ public class AffineCipher {
         {
             if (msg[i] != ' ')
             {
-                cipher = cipher
-                        + (char) ((((a * (msg[i] - 'A')) + b) % 26) + 'A');
+                cipher = cipher + (char) ((((a * (msg[i] - 'A')) + b) % 26) + 'A');
             } else
             {
                 cipher += msg[i];
@@ -52,10 +51,10 @@ public class AffineCipher {
     }
     public static void main(String[] args) throws IOException {
 
-        /*String msg = "ANASTASIA MAZURAK";
+        String msg = "ANASTASIA MAZURAK";
         String cipherText = encryptMessage(msg.toCharArray());
         System.out.println("Encrypted Message is : " + cipherText);
-        System.out.println("Decrypted Message is: " + decryptCipher(cipherText));*/
+        System.out.println("Decrypted Message is: " + decryptCipher(cipherText));
 
         String file ="plain.txt";
         String text = null;
