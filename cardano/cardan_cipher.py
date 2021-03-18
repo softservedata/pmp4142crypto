@@ -63,11 +63,7 @@ class Grille:
 g = Grille()
 
 print(g.grille)
-#print(g.rotate().grille)
-'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'
+
 en = g.encrypt('abcdefghijklmnopqrstuvwxyz')
 print(en)
 print(g.decrypt(en))
-# print(g.get_blocks('abcdefghijklmnop'))
-# en = g.encrypt('egmnpajbhlocikfd')
-# print(en)

@@ -1,5 +1,3 @@
-text = 'криптосистема'
-
 def encrypt(text, h):
     res = ''
     for i in range(h):
@@ -20,6 +18,19 @@ def decrypt(text, h):
             j += h
     return ''.join(res)
 
+text = 'some text'
+
 en = encrypt(text, 3)
 print(en)
 print(decrypt(en, 3))
+
+key = 0
+while True:
+    k = input('k = ' + str(key) +" ----- u/d/exit: \n")
+    if k == 'u':
+        key += 1
+    elif k == 'd':
+        key -= 1
+    else:
+        break
+    print(decrypt(en, key))
