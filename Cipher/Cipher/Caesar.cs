@@ -1,22 +1,27 @@
 ﻿using System;
-using System.Text;
-using System.Windows.Forms;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace Caesar_cipher
+namespace Cipher
 {
-    public partial class Form1 : Form
+    public partial class Caesar : Form
     {
-        public Form1()
+        public Caesar()
         {
             InitializeComponent();
         }
-
         string caesar_ukr(string text, int key)
         {
-            char[,] ABC = { { 'а', 'б', 'в', 'г', 'ґ', 'д', 'е', 'є', 'ж', 'з', 'и', 'і', 'ї', 'й', 'к', 'л', 'м', 
-                              'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ю', 'я', 'ь' }, 
-                            { 'А', 'Б', 'В', 'Г', 'Ґ', 'Д', 'Е', 'Є', 'Ж', 'З', 'И', 'І', 'Ї', 'Й', 'К', 'Л', 'М', 
+            char[,] ABC = { { 'а', 'б', 'в', 'г', 'ґ', 'д', 'е', 'є', 'ж', 'з', 'и', 'і', 'ї', 'й', 'к', 'л', 'м',
+                              'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ю', 'я', 'ь' },
+                            { 'А', 'Б', 'В', 'Г', 'Ґ', 'Д', 'Е', 'Є', 'Ж', 'З', 'И', 'І', 'Ї', 'Й', 'К', 'Л', 'М',
                               'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ю', 'Я', 'Ь' }
                           };
             if (key > 0) while (key > 33) key -= 33;
@@ -54,15 +59,15 @@ namespace Caesar_cipher
             return new_text;
         }
 
-        
+
         string caesar_eng(string text, int key)
         {
             if (key > 0) while (key > 26) key -= 26;
             if (key < 0) while (key < -26) key += 26;
-            char[,] ABC = { { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
-                              'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' }, 
-                            { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 
-                              'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' } 
+            char[,] ABC = { { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+                              'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' },
+                            { 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+                              'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' }
                           };
             int i = 0;
             string new_text = "";
@@ -74,7 +79,7 @@ namespace Caesar_cipher
                     if (ABC[0, j] == text[i])
                     {
                         int k = (j + key) % 26;
-                        if (k < 0) k += 26;  
+                        if (k < 0) k += 26;
                         if (k > 25) k -= 26;
                         new_text += ABC[0, k];
                         verifi = false;
@@ -83,8 +88,8 @@ namespace Caesar_cipher
                     else if (ABC[1, j] == text[i])
                     {
                         int k = (j + key) % 26;
-                        if (k < 0) k += 26;  //26
-                        if (k > 25) k -= 26;    //26
+                        if (k < 0) k += 26;
+                        if (k > 25) k -= 26;
                         new_text += ABC[1, k];
                         verifi = false;
                         break;
@@ -151,23 +156,11 @@ namespace Caesar_cipher
             }
         }
 
-        private void radioButton_eng_CheckedChanged(object sender, EventArgs e)
-        {
-            //DGV_eng(ref dataGridView_data);
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-
             radioButton_ukr.Checked = true;
 
-            textBox_main.ScrollBars = ScrollBars.Vertical;           
-        }
-
-        private void radioButton_ukr_CheckedChanged(object sender, EventArgs e)
-        {
-            //DGV_ukr(ref dataGridView_data);
+            textBox_main.ScrollBars = ScrollBars.Vertical;
         }
     }
 }
