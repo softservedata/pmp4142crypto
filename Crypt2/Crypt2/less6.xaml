@@ -19,6 +19,8 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="575,235,0,0" TextWrapping="Wrap" Text="" Name="key2" VerticalAlignment="Top" Width="120" TextChanged="key2_TextChanged"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="580,265,0,0" TextWrapping="Wrap" Text="" Name="num1" VerticalAlignment="Top" Width="120" TextChanged="num1_TextChanged"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="580,295,0,0" TextWrapping="Wrap" Text="" Name="num2" VerticalAlignment="Top" Width="120" TextChanged="num2_TextChanged"/>
+        <Button Content="create key 1" HorizontalAlignment="Left" Margin="505,500,0,0" Name="ck" VerticalAlignment="Top" Width="125" Height="55" Click="ck_Click"/>
+        <Button Content="creaate key 2" HorizontalAlignment="Left" Margin="685,500,0,0" Name="ck2" VerticalAlignment="Top" Width="120" Click="ck2_Click" Height="55"/>
 
     </Grid>
 </Window>

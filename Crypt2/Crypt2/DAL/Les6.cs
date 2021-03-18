@@ -150,7 +150,16 @@ namespace Crypt2.DAL
             return true;
         }
 
-
+        public string CreateKey()
+        {
+            Random random = new Random();
+            
+            long a = random.Next(100, 1000);
+            while(!IsTheNumberSimple(a)){
+                a = random.Next(100, 1000);
+            }
+            return Convert.ToString(a);
+        }
         public List<string> RSA_Endoce(string s, long e, long n)
         {
             List<string> result = new List<string>();

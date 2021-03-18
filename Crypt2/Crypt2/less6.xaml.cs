@@ -176,5 +176,19 @@ namespace Crypt2
             else
                 MessageBox.Show("Введіть секретний ключ!");
         }
+
+        private void ck_Click(object sender, RoutedEventArgs e)
+        {
+            
+            num1.Text = logic6.CreateKey();
+           
+        }
+
+       
+
+        private void ck2_Click(object sender, RoutedEventArgs e)
+        {
+            num2.Text = logic6.CreateKey();
+        }
     }
 }
