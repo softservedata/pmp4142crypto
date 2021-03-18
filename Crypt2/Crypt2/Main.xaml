@@ -11,6 +11,8 @@
         <Button Name="Les2" Content="Les2" HorizontalAlignment="Left" Margin="187,42,0,0" VerticalAlignment="Top" Width="75" Click="Les2_Click"/>
         <Button Name="Les3" Content="Les3" HorizontalAlignment="Left" Margin="27,90,0,0" VerticalAlignment="Top" Width="75" Click="Les3_Click"/>
         <Button Name="Les4" Content="Les4" HorizontalAlignment="Left" Margin="187,90,0,0" VerticalAlignment="Top" Width="75" Click="Les4_Click"/>
+        <Button Name="Les5" Content="Les5" HorizontalAlignment="Left" Margin="27,135,0,0" VerticalAlignment="Top" Width="75" Click="Les5_Click"/>
+        <Button Name="Les6" Content="Les6" HorizontalAlignment="Left" Margin="187,135,0,0" VerticalAlignment="Top" Width="75" Click="Les6_Click"/>
 
     </Grid>
 </Window>

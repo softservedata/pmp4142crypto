@@ -1,0 +1,24 @@
+﻿<Window x:Class="Crypt2.less6"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Crypt2"
+        mc:Ignorable="d"
+        Title="less6" Height="637" Width="1234">
+    <Grid>
+        <Button Content="import text" HorizontalAlignment="Left" Margin="95,400,0,0" VerticalAlignment="Top" Name="it" Width="125" Height="55" Click="it_Click"/>
+        <Button Content="export text" HorizontalAlignment="Left" Margin="305,400,0,0" VerticalAlignment="Top" Name="et" Width="130" RenderTransformOrigin="-0.4,2" Height="50" Click="et_Click"/>
+        <Button Content="import key" HorizontalAlignment="Left" Margin="505,400,0,0" VerticalAlignment="Top" Width="125" Name="ik" Height="50" Click="ik_Click"/>
+        <Button Content="export key" HorizontalAlignment="Left" Margin="685,400,0,0" VerticalAlignment="Top" Width="120" Name="ek" Height="50" Click="ek_Click"/>
+        <Button Content="encode" HorizontalAlignment="Left" Margin="885,400,0,0" VerticalAlignment="Top" Width="105" Name="en" Height="50" Click="en_Click"/>
+        <Button Content="decode" HorizontalAlignment="Left" Margin="1065,405,0,0" VerticalAlignment="Top" Width="105" Name="de" Height="40" Click="de_Click"/>
+        <TextBox HorizontalAlignment="Left" Name="tb1" Height="145" Margin="310,190,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="245" TextChanged="tb1_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Name="tb2" Height="145" Margin="725,185,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="275" TextChanged="tb2_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="575,202,0,0" TextWrapping="Wrap" Text="" Name="key1" VerticalAlignment="Top" Width="120" TextChanged="key1_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="575,235,0,0" TextWrapping="Wrap" Text="" Name="key2" VerticalAlignment="Top" Width="120" TextChanged="key2_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="580,265,0,0" TextWrapping="Wrap" Text="" Name="num1" VerticalAlignment="Top" Width="120" TextChanged="num1_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="580,295,0,0" TextWrapping="Wrap" Text="" Name="num2" VerticalAlignment="Top" Width="120" TextChanged="num2_TextChanged"/>
+
+    </Grid>
+</Window>

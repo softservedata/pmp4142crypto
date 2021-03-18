@@ -84,16 +84,6 @@ namespace Crypt2.DAL
                     }
                 }
             }
-
-            for (int k = 0; k < key; k++)
-            {
-                for (int m = 0; m < cipherText.Length; m++)
-                {
-                    Console.Write(matr[k, m] + " ");
-                }
-                Console.WriteLine();
-            }
-
             i = 0;
             j = 0;
             move_down = true;
@@ -170,15 +160,6 @@ namespace Crypt2.DAL
         public int ReadN(string FileLocation)
         {
             string path = @"data3.txt";
-
-
-            string readText = File.ReadAllText(path);
-
-            return Convert.ToInt32(readText);
-        }
-        public int ReadN1(string FileLocation)
-        {
-            string path = @"data4.txt";
 
 
             string readText = File.ReadAllText(path);
