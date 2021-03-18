@@ -65,6 +65,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="less4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Main.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,11 +84,15 @@
     <Compile Include="DAL\Les1.cs" />
     <Compile Include="DAL\Les2.cs" />
     <Compile Include="DAL\Les3.cs" />
+    <Compile Include="DAL\Les4.cs" />
     <Compile Include="less2.xaml.cs">
       <DependentUpon>less2.xaml</DependentUpon>
     </Compile>
     <Compile Include="less3.xaml.cs">
       <DependentUpon>less3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="less4.xaml.cs">
+      <DependentUpon>less4.xaml</DependentUpon>
     </Compile>
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>

@@ -10,6 +10,7 @@
         <Button Name="Les1" Content="Les1" HorizontalAlignment="Left" Margin="27,42,0,0" VerticalAlignment="Top" Width="75" Click="Les1_Click"/>
         <Button Name="Les2" Content="Les2" HorizontalAlignment="Left" Margin="187,42,0,0" VerticalAlignment="Top" Width="75" Click="Les2_Click"/>
         <Button Name="Les3" Content="Les3" HorizontalAlignment="Left" Margin="27,90,0,0" VerticalAlignment="Top" Width="75" Click="Les3_Click"/>
+        <Button Name="Les4" Content="Les4" HorizontalAlignment="Left" Margin="187,90,0,0" VerticalAlignment="Top" Width="75" Click="Les4_Click"/>
 
     </Grid>
 </Window>
