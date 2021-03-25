@@ -74,35 +74,38 @@ namespace VigenerCode
             var alpabet = "abcdefghijklmnopqrstuvwxyz".ToList();
             //
             int max_sum = 0;
+            int min_sum = int.MaxValue;
             string best_key = "";
             //
-            List<Task<(int,string)>> tasks = new List<Task<(int,string)>>();
+            List<Task<(int, int, string)>> tasks = new List<Task<(int, int, string)>>();
             for (int i = 1; i < max_key_lenght; i++)
             {
                 var combination = GetPermutationsWithRept(alpabet, i);
-                tasks.Add(Task<(int,string)>.Run(() => Decode(readText,combination)));
+                tasks.Add(Task<(int,int, string)>.Run(() => Decode(readText,combination)));
             }
             //
             Task.WaitAll(tasks.ToArray());
             //
-            List<(int, string)> ls = new List<(int, string)>();
+            List<(int, int, string)> ls = new List<(int,int,string)>();
             foreach (var t in tasks)
                 ls.Add(t.Result);
             //
             foreach(var elem in ls)
             {
-                if (elem.Item1 > max_sum)
+                if (elem.Item1>max_sum&&elem.Item2<min_sum)
                 {
                     max_sum = elem.Item1;
-                    best_key = elem.Item2;
+                    min_sum = elem.Item2;
+
+                    best_key = elem.Item3;
                 }
             }
-            var bla = best_key.ToCharArray();
-            for(int i =0; i < bla.Length; i++)
-            {
-                bla[i] = (char)(bla[i] - 13);
-            }
-            best_key = new string(bla);
+            //var bla = best_key.ToCharArray();
+            //for(int i =0; i < bla.Length; i++)
+            //{
+            //    bla[i] = (char)(bla[i] - 13);
+            //}
+            //best_key = new string(bla);
             //
             if (File.Exists("DecodeData.txt"))
             {
@@ -117,10 +120,12 @@ namespace VigenerCode
             }
             return (best_key);
         }
-        public (int,string) Decode(string readText, IEnumerable<IEnumerable<char>> combination)
+        public (int,int,string) Decode(string readText, IEnumerable<IEnumerable<char>> combination)
         {
             string potential_key = "";
             int max_sum = 0;
+            int min_sum = int.MaxValue;
+           // int bes_sum = int.MaxValue;
             string best_key = "";
             foreach (var variant in combination)
             {
@@ -129,18 +134,21 @@ namespace VigenerCode
                 {
                     potential_key += v[j];
                 }
-                Console.WriteLine(potential_key);
                 var temp = DecodeHelper(potential_key, readText);
-                if (temp > max_sum)
+                //var r = -max_sum + temp.Item1 + min_sum + temp.Item2;
+                if (temp.Item1>max_sum && temp.Item2<min_sum)
                 {
-                    max_sum = temp;
+                    //bes_sum = r;
+                    max_sum = temp.Item1;
+                    min_sum = temp.Item2;
                     best_key = potential_key;
                 }
+                Console.WriteLine(potential_key + "  " + temp);
                 potential_key = "";
             }
-            return (max_sum, best_key);
+            return (max_sum,min_sum, best_key);
         }
-        public int DecodeHelper(string potential_key,string encode_text)
+        public (int,int) DecodeHelper(string potential_key,string encode_text)
         {
             string decode_text = "";
             decode_text = Decipher(encode_text, potential_key);
@@ -148,7 +156,11 @@ namespace VigenerCode
             var e = dic.FirstOrDefault(c => c.Key == 'e').Value;
             var t = dic.FirstOrDefault(c => c.Key == 't').Value;
             var a = dic.FirstOrDefault(c => c.Key == 'a').Value;
-            return e + t + a;
+            //
+            var z = dic.FirstOrDefault(c => c.Key == 'z').Value;
+            var q = dic.FirstOrDefault(c => c.Key == 'q').Value;
+            var x = dic.FirstOrDefault(c => c.Key == 'x').Value;
+            return (e + t + a,z+q+z);
         }
         public Dictionary<Char, int> GetLettersEntrence(string text)
         {
