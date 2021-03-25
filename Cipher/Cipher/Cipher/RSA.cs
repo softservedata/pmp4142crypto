@@ -111,17 +111,27 @@ namespace Cipher.Cipher
         {
             string code = codeStream.GetText();
             string decoded = "";
-
+            Dictionary<string, char> codeSymbols = new Dictionary<string, char>();
             foreach (string codeSymbol in code.Split(' '))
             {
-                long decodeNumber = Convert.ToInt64(codeSymbol);
-                long decodeTemp = 1;
-                for (int i = 0; i < privateKey.d; i++)
+                if (codeSymbols.ContainsKey(codeSymbol))
                 {
-                    decodeTemp = (decodeTemp * decodeNumber) % privateKey.n;
+                    decoded += codeSymbols[codeSymbol];
+                    Console.WriteLine(decoded);
                 }
-                decoded += (char)decodeTemp;
-                Console.WriteLine(decoded);
+                else
+                {
+                    long decodeNumber = Convert.ToInt64(codeSymbol);
+                    long decodeTemp = 1;
+                    for (int i = 0; i < privateKey.d; i++)
+                    {
+                        decodeTemp = (decodeTemp * decodeNumber) % privateKey.n;
+                    }
+                    decoded += (char)decodeTemp;
+                    codeSymbols.Add(codeSymbol, (char)decodeTemp);
+                    Console.WriteLine(decoded);
+                }
+                
             }
 
             decodedStream.SetText(decoded);
